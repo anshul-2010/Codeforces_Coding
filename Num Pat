@@ -1,0 +1,41 @@
+'''
+Niveath attended the session on Loops and got really excited to try out some problems.
+
+Given two integers a and b, print the numbers in range [a,b] respecting the following conditions:
+
+Step1 : Initially, x=a.
+Step2 : Skip the next x integers and print the next number. Change x to the value printed right now.
+Repeat step2 as long as x≤b.
+Note: Each line must not contain more than 4 numbers, so format the printing of each number accordingly.
+Numbers in the same column must have their first digits aligned, this is explained in the notes section.
+Refer to the examples for more clarity.
+
+Input
+2 integers a and b (0<a≤b<106).
+
+Output
+All the numbers from a upto b respecting the above conditions, and with appropriate formatting.
+'''
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main()
+
+{
+    int a;
+    int b;
+    cin >> a >> b;
+    int aaa=0;
+    for(int i=a;i<=b;i+=i+1)
+    {
+        cout << i;
+        cout << "\t";
+        aaa++;
+        if(aaa%4==0)
+        {
+            cout << "\n";
+        }
+    }
+    return 0;
+}
