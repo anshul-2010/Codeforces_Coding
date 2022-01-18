@@ -1,0 +1,40 @@
+'''
+Shashank attended the session on Loops and got really excited to try out some problems.
+
+The representation of numbers that we use regularly is called the base-10 representation. A number abc in base-10 representation (0≤a,b,c≤9) has value = 100a+10b+c.
+
+Similarly, there are other base representation. A number xyz (0≤x,y,z≤1) in base-2 has value = 4x+2y+z.
+
+For example, the value of 1011 in base 2 = 1⋅8+0⋅4+1⋅2+1⋅1=11 in base-10.
+
+Given a number n in base-10 representation, can you find its representation in base-2? Output the base-2 representation of n in reverse order.
+
+For example, the base-2 representation of 11 is 1011. You will have to output 1011 in reverse order of digits i.e. output 1101.
+
+Note: Do not add leading zeroes to the binary representation. For example, do not represent 11 as 01011 for this problem; represent it as 1011.
+
+Input
+A single integer n (1≤n≤109).
+
+Output
+Output the binary / base-2 representation of n, in reverse order of digits.
+'''
+#include <bits/stdc++.h>
+#include <string> // for string and to_string()
+using namespace std;
+
+int main()
+
+{
+    int n;
+    string s;
+    
+    cin >> n;
+    while(n>=1)
+    {
+        s = s + to_string(n%2);
+        n=n/2;
+    }
+    cout << s;
+    return 0;
+}
