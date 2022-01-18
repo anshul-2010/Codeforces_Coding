@@ -1,0 +1,22 @@
+'''
+Jash attended the session on Loops and got really excited to try out some problems.
+
+Given an integer n, print the pattern accordingly:
+
+Input
+A single integer n (1≤n≤100)
+Output
+Output the corresponding pattern.
+'''
+n=int(input())
+s=[0]*n 
+for i in range(1,n+1):
+    s[i-1]=i
+for i in range(n):
+    for j in range(i,n):
+        print(s[j],end=' ')
+    for j in range(i):
+        print(s[j],end=' ')
+    print()
+    
+    
