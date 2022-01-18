@@ -1,0 +1,28 @@
+'''
+Nachiketh attended the session on Loops and got really excited to try out some problems.
+
+Let n be any positive integer. If n is even, then set n=n2, else set n=3n+1.
+
+Repeat this process indefinitely.
+
+What will be the last number you end up with? For instance starting with 12, we get the sequence of 12,6,3,10,5,16,8,4,2,1. This sequence is called the Collatz Sequence for 12.
+
+Does it converge to 1 for every number n? We believe so! This is called the Collatz Conjecture.
+
+Write a program to accept a positive integer n and print its Collatz Sequence, separated by a single space.
+
+Input
+A single integer n (1≤n≤104). n will be given such that it's Collatz Sequence does not exceed 104 numbers.
+
+Output
+Print the Collatz Sequence of n, separating the terms of the sequence by a single space.
+'''
+n=int(input())
+print(n,end=' ')
+while(n!=1):
+    if(n%2==0):
+        n=int(n/2)
+        print(n,end=' ')
+    else:
+        n=3*n+1 
+        print(n,end=' ')
